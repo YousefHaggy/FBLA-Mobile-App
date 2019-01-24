@@ -41,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_home:
                 fragment=new HomePage();
                 break;
+            case R.id.nav_search:
+                fragment=new SearchEvents();
+                break;
+
         }
         if(fragment!=null)
         {
