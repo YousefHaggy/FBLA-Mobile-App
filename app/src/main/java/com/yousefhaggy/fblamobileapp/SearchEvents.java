@@ -4,7 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -20,6 +25,8 @@ public class SearchEvents extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+
         return inflater.inflate(R.layout.search_events,container,false);
     }
 
@@ -29,5 +36,40 @@ public class SearchEvents extends Fragment {
         listView=(ListView) view.findViewById(R.id.categoryListView);
         ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item, events);
         listView.setAdapter(listAdapter);
+
     }
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater)
+    {
+        menuInflater.inflate(R.menu.action_bar_menu,menu);
+        final MenuItem searchItem=menu.findItem(R.id.action_search);
+        SearchView searchView=(SearchView) searchItem.getActionView();
+       searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+           @Override
+           public boolean onQueryTextSubmit(String s) {
+   return  true;
+           }
+
+           @Override
+           public boolean onQueryTextChange(String s) {
+               ArrayList<String> tempList= new ArrayList<String>();
+               for(String item:events )
+               {
+                   if(item.toLowerCase().contains(s.toLowerCase()))
+                   {
+                       tempList.add(item);
+                       Log.e("ITEM ",item+" S "+s);
+                   }
+               }
+
+               ArrayAdapter<String> newAdapter= new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item,tempList);
+               if(getActivity()!=null) {
+                   listView.setAdapter(newAdapter);
+
+               }
+               return true;           }
+       });
+        super.onCreateOptionsMenu(menu,menuInflater);
+    }
+
 }
