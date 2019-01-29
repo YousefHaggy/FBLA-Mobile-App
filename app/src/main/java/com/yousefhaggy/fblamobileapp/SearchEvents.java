@@ -1,5 +1,6 @@
 package com.yousefhaggy.fblamobileapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -36,6 +38,13 @@ public class SearchEvents extends Fragment {
         listView=(ListView) view.findViewById(R.id.categoryListView);
         ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item, events);
         listView.setAdapter(listAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent launchEvent= new Intent(getContext(),EventPage.class);
+                startActivity(launchEvent);
+            }
+        });
 
     }
     @Override
@@ -47,8 +56,23 @@ public class SearchEvents extends Fragment {
        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
            @Override
            public boolean onQueryTextSubmit(String s) {
-   return  true;
-           }
+               ArrayList<String> tempList= new ArrayList<String>();
+               for(String item:events )
+               {
+                   if(item.toLowerCase().contains(s.toLowerCase()))
+                   {
+                       tempList.add(item);
+                       Log.e("ITEM ",item+" S "+s);
+                   }
+               }
+
+               if(getActivity()!=null)
+               {
+                   ArrayAdapter<String> newAdapter= new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item,tempList);
+                   listView.setAdapter(newAdapter);
+
+               }
+               return true;                  }
 
            @Override
            public boolean onQueryTextChange(String s) {
@@ -62,12 +86,14 @@ public class SearchEvents extends Fragment {
                    }
                }
 
-               ArrayAdapter<String> newAdapter= new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item,tempList);
-               if(getActivity()!=null) {
+               if(getActivity()!=null)
+               {
+                   ArrayAdapter<String> newAdapter= new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item,tempList);
                    listView.setAdapter(newAdapter);
 
                }
-               return true;           }
+               return true;
+           }
        });
         super.onCreateOptionsMenu(menu,menuInflater);
     }

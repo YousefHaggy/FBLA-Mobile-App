@@ -10,15 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75eedfa2-ae9d-4f27-9168-b16e24b98b57" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/xml/searchable.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corners.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_events.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_events.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,22 +44,48 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="750">
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="39" />
+            <state relative-caret-position="272">
+              <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="empty_action_bar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,91 +94,71 @@
       <file leaf-file-name="colors.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+            <state relative-caret-position="306">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="empty_action_bar.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="action_bar_menu.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchEvents.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchEvents.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1598">
-              <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+            <state relative-caret-position="34">
+              <caret line="42" column="91" lean-forward="false" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2640#2648#0" expanded="true" />
-                <element signature="e#3196#3197#0" expanded="true" />
-                <element signature="e#3226#3227#0" expanded="true" />
-                <element signature="e#3362#3370#0" expanded="true" />
-                <element signature="e#3718#3726#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_events.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_events.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+      <file leaf-file-name="activity_event_page.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml">
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="-309">
+              <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
+        </entry>
+      </file>
+      <file leaf-file-name="rounded_corners.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rounded_corners.xml">
+          <provider selected="true" editor-type-id="android-designer2">
             <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -2197,20 +2203,22 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/HomePage.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/home_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/searchable.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/search_events.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corners.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="44" />
     <option name="width" value="1600" />
     <option name="height" value="1756" />
@@ -2231,7 +2239,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -2242,47 +2249,13 @@
             <path>
               <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="fblamobileapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="xml" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="FBLA-Mobile-App" type="1abcf292:AndroidViewProjectNode" />
@@ -2292,16 +2265,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="device.picker.selection" value="VS988ef2b36d0" />
+    <property name="device.picker.selection" value="192.168.56.101:5555" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="com.yousefhaggy.fblamobileapp" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2468,10 +2447,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="44" width="3200" height="1756" extended-state="6" />
+    <frame x="0" y="44" width="1600" height="1756" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2482,11 +2461,11 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33260235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3362573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966623" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14170432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18528083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967836" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2543,25 +2522,173 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="47" column="63" lean-forward="false" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="42" column="91" lean-forward="false" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_events.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="42" column="91" lean-forward="false" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="28" column="37" lean-forward="false" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_events.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="47" column="63" lean-forward="false" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java">
@@ -2570,24 +2697,18 @@
           <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2640#2648#0" expanded="true" />
-            <element signature="e#3196#3197#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3362#3370#0" expanded="true" />
-            <element signature="e#3718#3726#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
@@ -2610,21 +2731,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home_page.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
@@ -2636,25 +2753,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_events.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -2682,14 +2799,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
@@ -2709,25 +2826,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/home_page.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/simple_list_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
@@ -2742,229 +2857,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/navigation.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/ea7f17c72e4233dcfa8017dc363252c0/jars/classes.jar!/android/support/v7/app/AppCompatDelegateImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <marker date="1546296768049" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1546296768049" expanded="false" signature="146:4520" ph="..." />
-            <marker date="1546296768049" expanded="false" signature="6852:6896" ph="run() → {" />
-            <marker date="1546296768049" expanded="false" signature="7394:7405" ph="}" />
-            <marker date="1546296768049" expanded="true" signature="7657:8577" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="8631:9476" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="9533:9544" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="9566:9572" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="9617:9697" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="9741:9752" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="9775:9781" ph=" }" />
-            <marker date="1546296768049" expanded="false" signature="9841:9852" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="9886:9892" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="9938:10581" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="10636:11769" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="11817:12092" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="12136:12412" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="12486:12570" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="12636:12976" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="13003:13014" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="13035:13041" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="13068:13325" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="13358:13503" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="13544:13797" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="13841:14134" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="14192:14449" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="14507:14724" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="14779:14922" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="14952:15345" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="15381:16346" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="16387:22605" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="19589:19731" ph="onApplyWindowInsets(v, insets) → {" />
-            <marker date="1546296768049" expanded="false" signature="20265:20292" ph="}" />
-            <marker date="1546296768049" expanded="false" signature="20402:20506" ph="onFitSystemWindows(insets) → {" />
-            <marker date="1546296768049" expanded="false" signature="20626:20653" ph="}" />
-            <marker date="1546296768049" expanded="true" signature="22294:22540" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="22351:22374" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="22431:22522" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="22656:22663" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="22705:24066" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="24123:25508" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="25561:26201" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="26254:26620" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="26656:26796" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="26836:27260" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="27299:27504" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="27577:27949" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="28001:28012" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="28040:28046" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="28156:29101" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="29143:29309" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="29422:36994" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="32010:32070" ph="run() → {" />
-            <marker date="1546296768049" expanded="true" signature="32748:33425" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="32826:32966" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="33042:33391" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="33700:33727" ph="}" />
-            <marker date="1546296768049" expanded="true" signature="35072:36054" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="35142:35643" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="35711:36028" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="37044:37157" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="37226:37282" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="37337:37348" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="37385:37391" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="37428:37521" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="37551:37802" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="37856:38859" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="38906:39606" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="39657:40315" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="40368:40624" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="40734:42156" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="42218:42632" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="42671:43110" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="43210:43279" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="43360:43435" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="43524:46756" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="46843:47044" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="47116:48684" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="48770:50246" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="50335:50916" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="51011:54125" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="54175:54559" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="54595:54606" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="54665:54671" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="54757:55597" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="55665:55939" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="56005:57767" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="57869:58338" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="58409:58781" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="58884:59525" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="59652:60125" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="60179:60462" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="60510:61380" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="61422:63660" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="63720:63881" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="63938:64413" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="64442:64453" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="64475:64481" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="64508:65259" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="65296:65743" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="65789:66238" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="66271:66805" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="66838:66937" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="66988:67884" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="67932:68133" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="68237:68330" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="68386:68969" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="69023:69102" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="69115:70758" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="69471:70692" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="69554:70247" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="70322:70678" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="70826:72151" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="70866:70877" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="70925:71195" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="71248:71334" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="71381:71537" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="71624:71878" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="71944:72145" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="72213:74275" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="72490:72609" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="72647:72761" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="72798:73032" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="73055:74007" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="73188:73289" ph="onReceive(context, intent) → {" />
-            <marker date="1546296768049" expanded="false" signature="73379:73402" ph="}" />
-            <marker date="1546296768049" expanded="true" signature="74032:74269" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="74341:77918" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="74413:74428" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="74444:74454" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="74512:74627" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="74693:74833" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="74902:75033" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="75074:75085" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="75162:75697" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="75761:75910" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="75972:76098" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="76209:76498" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="76606:76953" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="77099:77416" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="77549:77912" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="77983:79043" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="78034:78049" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="78064:78074" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="78132:78247" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="78313:78716" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="78771:78880" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="78934:79037" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="79096:85887" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="79749:79843" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="79884:80167" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="80211:80388" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="80429:81611" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="81652:82039" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="82130:82693" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="82736:83182" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="83238:83617" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="83651:83863" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="83927:85881" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="84193:84901" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="84317:84442" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="84546:84682" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="84779:84887" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="84929:84944" ph="{}" />
-            <marker date="1546296768049" expanded="false" signature="84987:85006" ph=" { " />
-            <marker date="1546296768049" expanded="false" signature="85015:85029" ph=" }" />
-            <marker date="1546296768049" expanded="true" signature="85093:85315" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="85437:85871" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="86004:86501" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="86044:86055" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="86115:86337" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="86417:86495" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="86617:87818" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="86656:86667" ph="{}" />
-            <marker date="1546296768049" expanded="true" signature="86747:87377" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="87437:87812" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="87913:90476" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="88082:88130" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="88202:88278" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="88351:88428" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="88505:88582" ph="{...}" />
-            <marker date="1546296768049" expanded="true" signature="88641:90470" ph="{...}" />
-            <marker date="1546296768049" expanded="false" signature="89250:89353" ph="onAnimationEnd(view) → {" />
-            <marker date="1546296768049" expanded="false" signature="90142:90165" ph="}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2973,89 +2882,129 @@
         <state relative-caret-position="625">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/searchable.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/searchable.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/search_events.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/action_bar_menu.xml">
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/empty_action_bar.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rounded_corners.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/SearchEvents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="60" column="51" lean-forward="false" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
+        <state relative-caret-position="34">
+          <caret line="42" column="91" lean-forward="false" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2640#2648#0" expanded="true" />
-            <element signature="e#3196#3197#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
-            <element signature="e#3362#3370#0" expanded="true" />
-            <element signature="e#3718#3726#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_event_page.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="52" column="53" lean-forward="false" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
