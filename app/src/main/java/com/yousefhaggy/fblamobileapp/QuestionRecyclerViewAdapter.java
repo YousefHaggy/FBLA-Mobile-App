@@ -50,23 +50,21 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
     @Override
     public void onBindViewHolder(@NonNull final QuestionViewHolder questionViewHolder, int i) {
         questionViewHolder.questionText.setText(questions.get(i).question);
-
+        if(questionViewHolder.radioGroup.getChildCount()==0){
         for (int c = 0; c < questions.get(i).choices.length; c++) {
-            final RadioButton answerChoice=new RadioButton(questionViewHolder.context);
+            final RadioButton answerChoice = new RadioButton(questionViewHolder.context);
+
+            answerChoice.setText(questions.get(i).choices[c]);
+
             answerChoice.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                     questions.get(questionViewHolder.getAdapterPosition()).setSelectedChoice(answerChoice.getText().toString());
-                    for(Question q: questions)
-                    {
-                        Log.e("RRRRR",q.getSelectedChoice()+" CORRECT ANSWER IS: "+q.answer);
-
-                    }
-
                 }
             });
-           answerChoice.setText(questions.get(i).choices[c]);
+
             questionViewHolder.radioGroup.addView(answerChoice);
+        }
         }
 
     }

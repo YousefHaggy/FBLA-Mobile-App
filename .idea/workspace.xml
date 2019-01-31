@@ -21,15 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75eedfa2-ae9d-4f27-9168-b16e24b98b57" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/EventPage.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/Question.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/Question.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_test_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_test_page.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/multiple_choice_question_card.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/multiple_choice_question_card.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -85,7 +79,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="-903">
               <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
@@ -107,19 +101,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionRecyclerViewAdapter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuestionRecyclerViewAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="61" column="91" lean-forward="false" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
+            <state relative-caret-position="612">
+              <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1292#1293#0" expanded="true" />
                 <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#2060#2566#0" expanded="true" />
-                <element signature="e#2565#2566#0" expanded="true" />
-                <element signature="e#2912#2913#0" expanded="true" />
-                <element signature="e#2951#2952#0" expanded="true" />
+                <element signature="e#2188#2507#0" expanded="true" />
+                <element signature="e#2506#2507#0" expanded="true" />
+                <element signature="e#2802#2803#0" expanded="true" />
+                <element signature="e#2841#2842#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="301">
+              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -2235,8 +2229,8 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_test_page.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/multiple_choice_question_card.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/Question.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java" />
       </list>
     </option>
@@ -3005,8 +2999,27 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-903">
           <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_page.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -3026,36 +3039,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/QuestionRecyclerViewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="61" column="91" lean-forward="false" selection-start-line="61" selection-start-column="91" selection-end-line="61" selection-end-column="91" />
+        <state relative-caret-position="612">
+          <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1292#1293#0" expanded="true" />
             <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#2060#2566#0" expanded="true" />
-            <element signature="e#2565#2566#0" expanded="true" />
-            <element signature="e#2912#2913#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
+            <element signature="e#2188#2507#0" expanded="true" />
+            <element signature="e#2506#2507#0" expanded="true" />
+            <element signature="e#2802#2803#0" expanded="true" />
+            <element signature="e#2841#2842#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_test_page.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yousefhaggy/fblamobileapp/TestPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

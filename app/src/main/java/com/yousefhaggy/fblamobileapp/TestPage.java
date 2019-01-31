@@ -18,11 +18,12 @@ public class TestPage extends AppCompatActivity {
         RecyclerView testRecyclerView=(RecyclerView) findViewById(R.id.TestRecyclerView);
         LinearLayoutManager llm=new LinearLayoutManager(this);
         testRecyclerView.setLayoutManager(llm);
-        String[] choices={"An apple","NO"};
-        questionList.add(new Question("What is life?",choices,"NO"));
-        String[] choices2={"An orange","NO"};
-        questionList.add(new Question("What is 2+2?",choices2,"NO"));
-        Log.e("choices ",questionList.get(0).question);
+        for(int i=0; i<5;i++) {
+            String[] choices = {"An apple", "NO"};
+            questionList.add(new Question("What is life?", choices, "NO"));
+            String[] choices2 = {"An orange", "NO"};
+            questionList.add(new Question("What is 2+2?", choices2, "NO"));
+        }
         QuestionRecyclerViewAdapter questionRecyclerView=new QuestionRecyclerViewAdapter(questionList);
         testRecyclerView.setAdapter(questionRecyclerView);
     }
