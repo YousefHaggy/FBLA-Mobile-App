@@ -21,7 +21,8 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".EventPage"></activity>
+        <activity android:name=".EventPage" />
+        <activity android:name=".TestPage"></activity>
     </application>
 
 </manifest>

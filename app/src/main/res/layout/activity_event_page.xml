@@ -74,11 +74,11 @@
 
         <EditText
             android:id="@+id/numberOfQuestionsTextView"
-            android:layout_width="181dp"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Enter number of questions"
+            android:hint="# of questions"
             android:inputType="number" />
 
         <Button
