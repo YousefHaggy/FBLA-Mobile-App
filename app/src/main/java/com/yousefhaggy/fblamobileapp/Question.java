@@ -5,7 +5,6 @@ public class Question {
     String[] choices;
     String answer;
     private String selectedChoice;
-    boolean isWrong;
     public Question(String question, String[] choices,String answer)
     {
         this.question=question;
