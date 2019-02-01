@@ -1,6 +1,7 @@
 package com.yousefhaggy.fblamobileapp;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -33,8 +34,8 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
 
     }
 
-    List<Question> questions;
-
+    public List<Question> questions;
+    public boolean testSubmitted=false;
     QuestionRecyclerViewAdapter(List<Question> questions) {
         this.questions = questions;
     }
@@ -47,26 +48,39 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
         return qv;
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull final QuestionViewHolder questionViewHolder, int i) {
         questionViewHolder.questionText.setText(questions.get(i).question);
-        if(questionViewHolder.radioGroup.getChildCount()==0){
+        questionViewHolder.radioGroup.removeAllViews();
+
         for (int c = 0; c < questions.get(i).choices.length; c++) {
+
             final RadioButton answerChoice = new RadioButton(questionViewHolder.context);
 
             answerChoice.setText(questions.get(i).choices[c]);
-
+            if (questions.get(i).getSelectedChoice() != null && questions.get(i).getSelectedChoice().equals(questions.get(i).choices[c])) {
+                answerChoice.setChecked(true);
+            }
             answerChoice.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    questions.get(questionViewHolder.getAdapterPosition()).setSelectedChoice(answerChoice.getText().toString());
+                    if (b) {
+                        questions.get(questionViewHolder.getAdapterPosition()).setSelectedChoice(answerChoice.getText().toString());
+                        // Log.e("STUFF ", questionViewHolder.getAdapterPosition() + " Positon " + questions.get(questionViewHolder.getAdapterPosition()).getSelectedChoice());
+                    }
                 }
             });
 
             questionViewHolder.radioGroup.addView(answerChoice);
         }
+        if (questions.get(i).isWrong) {
+            questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#ffe6e6"));
         }
+        else if(testSubmitted){
+            questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#E6FFEE"));
 
+        }
     }
 
     @Override
