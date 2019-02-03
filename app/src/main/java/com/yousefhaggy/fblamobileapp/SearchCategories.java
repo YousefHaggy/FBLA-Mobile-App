@@ -1,6 +1,7 @@
 package com.yousefhaggy.fblamobileapp;
 
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,37 +16,57 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchEvents extends Fragment {
+public class SearchCategories extends Fragment {
     private ListView listView;
-    private String[] events= {"Diagnostic Tests","3-D Animation","Accounting 1","Accounting 2","Agribusiness","Banking and Financial Systems","Business Calculations","Business Communications","Business Ethics","Business Financial Plan","Business Law","Business Plan","Client Service","Computer Applications","Computer Problem Solving","Cyber Security","Database Design","Desktop Publishing / Publication Design","Digital Video Production","E-Business","Economics","Electronic Career Portfolio","Emerging Business Issues","Entrepreneurship","FBLA Principles/Procedures","Future Business Leader","Global Business","Graphic Design","Health Care Administration","Help Desk","Hospitality Managment","Impromptu Speaking","Insurance & Risk Management","Introduction to Business","Introduction to Business Communication","Introduction to Business Presentation","Introduction to Business Procedures","Introduction to Information Technology","Introduction to Parliamentary Procedures","Job Interview","Management Decision Making","Management Information Systems","Marketing","Mobile Application Development","Network Design","Networking Concepts","Personal Finance","Public Service Announcement","Public Speaking 1","Public Speaking 2","Sales Presentation","Securities and Investments","Social Media Campaign","Sports and Entertainment Management","Spreadsheet Applications","Website Design","Word Processing"};
-    @Nullable
+    private String[] categories;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-
+        getCategoryList();
         return inflater.inflate(R.layout.search_events,container,false);
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         listView=(ListView) view.findViewById(R.id.categoryListView);
-        ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item, events);
+        ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item, categories);
         listView.setAdapter(listAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent launchEvent= new Intent(getContext(),EventPage.class);
+                Intent launchEvent= new Intent(getContext(),CategoryPage.class);
+                launchEvent.putExtra("CategoryName", categories[i]);
                 startActivity(launchEvent);
             }
         });
 
+    }
+    public void getCategoryList(){
+        TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());
+        try{
+            databaseHelper.createDatabase();
+        } catch (IOException e) {
+            throw new Error("cant make database");
+        }
+        try{
+            databaseHelper.openDatabase();
+        }
+        catch (SQLException e){
+            throw e;
+
+        }
+        List<String> dbCategoryList=databaseHelper.getCategoryList();
+        categories =new String[dbCategoryList.size()];
+        categories =dbCategoryList.toArray(categories);
+        databaseHelper.close();
     }
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater)
@@ -57,7 +78,7 @@ public class SearchEvents extends Fragment {
            @Override
            public boolean onQueryTextSubmit(String s) {
                ArrayList<String> tempList= new ArrayList<String>();
-               for(String item:events )
+               for(String item: categories)
                {
                    if(item.toLowerCase().contains(s.toLowerCase()))
                    {
@@ -77,7 +98,7 @@ public class SearchEvents extends Fragment {
            @Override
            public boolean onQueryTextChange(String s) {
                ArrayList<String> tempList= new ArrayList<String>();
-               for(String item:events )
+               for(String item: categories)
                {
                    if(item.toLowerCase().contains(s.toLowerCase()))
                    {

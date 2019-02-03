@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 fragment=new HomePage();
                 break;
             case R.id.nav_search:
-                fragment=new SearchEvents();
+                fragment=new SearchCategories();
                 break;
 
         }
