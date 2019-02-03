@@ -7,6 +7,35 @@
     tools:context=".TestPage"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/testPercentage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your score: 95%"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/testScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You missed 6 questions"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Share Score"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/TestRecyclerView"
         android:layout_width="match_parent"

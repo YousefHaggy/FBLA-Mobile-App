@@ -1,6 +1,7 @@
 package com.yousefhaggy.fblamobileapp;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -74,12 +75,24 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
 
             questionViewHolder.radioGroup.addView(answerChoice);
         }
-        if (questions.get(i).isWrong) {
-            questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#ffe6e6"));
-        }
-        else if(testSubmitted){
-            questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#E6FFEE"));
+        if(testSubmitted) {
+            for (int ch = 0; ch < questionViewHolder.radioGroup.getChildCount(); ch++) {
 
+if(!((RadioButton)questionViewHolder.radioGroup.getChildAt(ch)).getText().toString().equals(questions.get(i).getSelectedChoice())) {
+    questionViewHolder.radioGroup.getChildAt(ch).setEnabled(false);
+}
+
+            }
+            if (questions.get(i).isWrong) {
+                questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#ffe6e6"));
+                TextView correctAnswer= (TextView) questionViewHolder.cardView.findViewById(R.id.correctAnswerTextView);
+                correctAnswer.setText("Correct answer: "+questions.get(i).answer);
+                correctAnswer.setVisibility(View.VISIBLE);
+
+            } else {
+                questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#E6FFEE"));
+
+            }
         }
     }
 
