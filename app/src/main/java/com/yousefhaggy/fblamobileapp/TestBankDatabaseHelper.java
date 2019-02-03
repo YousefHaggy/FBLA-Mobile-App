@@ -14,16 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestBankDatabaseHelper extends SQLiteOpenHelper {
-    private static final String SQL_CREATE_ENTRIES="CREATE TABLE "+ TestBankContract.QuestionTable.TABLE_NAME+" ("
-            + TestBankContract.QuestionTable._ID+" INTEGER PRIMARY KEY,"+ TestBankContract.QuestionTable.COLUMN_NAME_QUESTION+" TEXT,"
-            + TestBankContract.QuestionTable.COLUMN_NAME_TEST+" TEXT,"
-            + TestBankContract.QuestionTable.COLUMN_NAME_CATEGORY+" TEXT,"
-            + TestBankContract.QuestionTable.COLUMN_NAME_CHOICES+" TEXT);\n" +
-            "CREATE TABLE "+ TestBankContract.AnswerTable.TABLE_NAME+" ("
-            + TestBankContract.AnswerTable.COLUMN_NAME_ANSWER+" TEXT,"
-            + TestBankContract.AnswerTable.COLUMN_NAME_QUESTIONID+" INTEGER)";
-    private  static final String SQL_DELETE_ENTRIES=
-            "DROP TABLE IF EXISTS "+ TestBankContract.QuestionTable.TABLE_NAME+";\n DROP TABLE IF EXISTS "+ TestBankContract.AnswerTable.TABLE_NAME;
 
   private static final int DATABASE_VESION=1;
   private static String DB_PATH="/data/data/com.yousefhaggy.fblamobileapp/databases/";
@@ -40,9 +30,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        /*String[] queries=SQL_CREATE_ENTRIES.split(";\n");
-        for(String q: queries)
-            sqLiteDatabase.execSQL(q);*/
+
     }
     @Override
     public synchronized void close(){
@@ -52,10 +40,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        /*String[] queries=SQL_DELETE_ENTRIES.split(";\n");
-        for(String q: queries)
-            sqLiteDatabase.execSQL(q);
-        onCreate(sqLiteDatabase);*/
+
     }
     public void createDatabase() throws IOException{
         boolean dbExist=checkDatabase();
@@ -134,12 +119,17 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
    }
    public List<Question> getTestQuestions(String test)
    {
-       Cursor cursor=database.rawQuery("SELECT * FROM QuestionTable WHERE TestName='"+test+"",null);
+       Cursor cursor=database.rawQuery("SELECT * FROM QuestionTable WHERE TestName='"+test+"'",null);
        List<Question> questionList=new ArrayList();
        while(cursor.moveToNext())
        {
            String questionText=cursor.getString(cursor.getColumnIndexOrThrow("Question"));
-           String questionChoices=cursor.getString()
+           String questionChoices=cursor.getString(cursor.getColumnIndexOrThrow("QuestionChoices")).toLowerCase();
+           String[] choices=questionChoices.split(";");
+           String correctAnswer=cursor.getString(cursor.getColumnIndexOrThrow("CorrectAnswer")).toLowerCase();
+
+           Question question=new Question(questionText,choices,correctAnswer);
+           questionList.add(question);
        }
        return questionList;
    }

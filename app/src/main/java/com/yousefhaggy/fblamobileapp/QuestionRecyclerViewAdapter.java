@@ -52,7 +52,7 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
 
     @Override
     public void onBindViewHolder(@NonNull final QuestionViewHolder questionViewHolder, int i) {
-        questionViewHolder.questionText.setText(questions.get(i).question);
+        questionViewHolder.questionText.setText((i+1)+". "+questions.get(i).question);
         questionViewHolder.radioGroup.removeAllViews();
 
         for (int c = 0; c < questions.get(i).choices.length; c++) {
