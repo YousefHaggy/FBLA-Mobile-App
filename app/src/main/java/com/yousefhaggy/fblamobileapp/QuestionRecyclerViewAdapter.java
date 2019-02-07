@@ -22,6 +22,7 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
     public static class QuestionViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
         TextView questionText;
+        TextView correctAnswerView;
         RadioGroup radioGroup;
         Context context;
 
@@ -30,6 +31,7 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
             cardView = (CardView) itemView.findViewById(R.id.cardView);
             questionText = (TextView) itemView.findViewById(R.id.questionTextView);
             radioGroup = (RadioGroup) itemView.findViewById(R.id.answerRadioGroup);
+            correctAnswerView= (TextView) itemView.findViewById(R.id.correctAnswerTextView);
             context = itemView.getContext();
         }
 
@@ -85,13 +87,12 @@ if(!((RadioButton)questionViewHolder.radioGroup.getChildAt(ch)).getText().toStri
             }
             if (questions.get(i).isWrong) {
                 questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#ffe6e6"));
-                TextView correctAnswer= (TextView) questionViewHolder.cardView.findViewById(R.id.correctAnswerTextView);
-                correctAnswer.setText("Correct answer: "+questions.get(i).answer);
-                correctAnswer.setVisibility(View.VISIBLE);
+               questionViewHolder.correctAnswerView.setText("Correct answer: "+questions.get(i).answer);
+                questionViewHolder.correctAnswerView.setVisibility(View.VISIBLE);
 
             } else {
                 questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#E6FFEE"));
-
+                questionViewHolder.correctAnswerView.setVisibility(View.GONE);
             }
         }
     }

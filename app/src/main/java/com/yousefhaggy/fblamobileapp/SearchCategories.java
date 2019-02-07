@@ -42,9 +42,28 @@ public class SearchCategories extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent launchEvent= new Intent(getContext(),CategoryPage.class);
-                launchEvent.putExtra("CategoryName", categories[i]);
-                startActivity(launchEvent);
+                SelectTestDialogFragment selectTestDialogFragment=new SelectTestDialogFragment();
+                Bundle bundle=new Bundle();
+                TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());
+                try{
+                    databaseHelper.createDatabase();
+                } catch (IOException e) {
+                    throw new Error("cant make database");
+                }
+                try{
+                    databaseHelper.openDatabase();
+                }
+                catch (SQLException e){
+                    throw e;
+
+                }
+                List<String> testList=databaseHelper.getTests(categories[i]);
+                databaseHelper.close();
+                bundle.putStringArrayList("TestList",(ArrayList)testList);
+                bundle.putString("CategoryName",categories[i]);
+                selectTestDialogFragment.setArguments(bundle);
+                selectTestDialogFragment.show(getActivity().getSupportFragmentManager(),null);
+
             }
         });
 

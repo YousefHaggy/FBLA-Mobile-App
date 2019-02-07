@@ -49,7 +49,8 @@ public class TestPage extends AppCompatActivity {
                     testRecyclerViewAdapter.notifyItemChanged(i);
                 }
                 testRecyclerViewAdapter.testSubmitted = true;
-                testRecyclerView.smoothScrollToPosition(0);
+                testRecyclerView.scrollToPosition(0);
+                //testRecyclerView.smoothScrollToPosition(0);
                 submitTest.setVisibility(View.GONE);
                 double percentage = (questionList.size() - wrong * 1.0) / questionList.size();
                 TextView testPercentage = (TextView) findViewById(R.id.testPercentage);
@@ -73,7 +74,13 @@ public class TestPage extends AppCompatActivity {
         {
             throw e;
         }
-        questionList=databaseHelper.getTestQuestions(testName);
+        if(testName.equals("RANDOM")){
+            String categoryName=getIntent().getStringExtra("CategoryName");
+            questionList=databaseHelper.getRandomQuizQuestions(categoryName);
+        }
+        else {
+            questionList = databaseHelper.getTestQuestions(testName);
+        }
         databaseHelper.close();
     }
 

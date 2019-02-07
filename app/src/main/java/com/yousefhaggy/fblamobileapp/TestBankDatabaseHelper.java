@@ -11,7 +11,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 
 public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
@@ -132,5 +134,28 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
            questionList.add(question);
        }
        return questionList;
+   }
+   public List<Question> getRandomQuizQuestions(String category)
+   {
+       Cursor cursor=database.rawQuery("SELECT * FROM QuestionTable WHERE CategoryName='"+category+"'",null);
+       List<Question> questionList=new ArrayList();
+       while(cursor.moveToNext())
+       {
+           String questionText=cursor.getString(cursor.getColumnIndexOrThrow("Question"));
+           String questionChoices=cursor.getString(cursor.getColumnIndexOrThrow("QuestionChoices")).toLowerCase();
+           String[] choices=questionChoices.split(";");
+           String correctAnswer=cursor.getString(cursor.getColumnIndexOrThrow("CorrectAnswer")).toLowerCase();
+           Question question=new Question(questionText,choices,correctAnswer);
+           questionList.add(question);
+       }
+       List<Question> finalQuestionList=new ArrayList<>();
+       Random generator=new Random();
+       for(int i=0; i<10;i++)
+       {
+           int randomIndex=generator.nextInt(questionList.size());
+           finalQuestionList.add(questionList.get(randomIndex));
+           questionList.remove(randomIndex);
+       }
+       return finalQuestionList;
    }
 }
