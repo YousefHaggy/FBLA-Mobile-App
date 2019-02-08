@@ -34,7 +34,8 @@
         android:text="Share Score"
         android:textAlignment="center"
         android:textSize="12sp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:drawableLeft="@drawable/ic_share_black_24dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/TestRecyclerView"
@@ -57,5 +58,6 @@
         android:id="@+id/submitTestButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Submit Test"
+      />
 </LinearLayout>
