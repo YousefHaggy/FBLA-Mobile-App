@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -50,7 +51,7 @@ public class HomePage extends Fragment {
         LayoutInflater layoutInflater=(LayoutInflater) getActivity().getLayoutInflater();
 
        for(ScoreHistoryItem s: recentCategoryList) {
-           View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
+           final View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
            TextView categoryTextView=(TextView) cardView.findViewById(R.id.testOrCategoryTitle);
            categoryTextView.setText(s.getItemTitle());
            TextView scoreTextView=(TextView) cardView.findViewById(R.id.scoreTextView);
@@ -58,6 +59,13 @@ public class HomePage extends Fragment {
            scoreTextView.setText(df.format(s.getItemScore()));
            TextView scoreTypeTextview=(TextView) cardView.findViewById(R.id.typeOfScoreTextView);
            scoreTypeTextview.setText("Average Score");
+           cardView.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   String categoryName=((TextView) cardView.findViewById(R.id.testOrCategoryTitle)).getText().toString();
+                   launchSelectTestDialog(categoryName);
+               }
+           });
            linearLayout.addView(cardView, 1);
        }
        for(ScoreHistoryItem s:recentTestList)
@@ -70,7 +78,39 @@ public class HomePage extends Fragment {
            scoreTextView.setText(df.format(s.getItemScore()));
            TextView recentTestsHeader=(TextView) linearLayout.findViewById(R.id.recentTestsHeader);
            int index=((ViewGroup)linearLayout).indexOfChild(recentTestsHeader);
-           linearLayout.addView(cardView, index);
+           linearLayout.addView(cardView, index+1);
        }
+    }
+    public void launchSelectTestDialog(String categoryname)
+    {
+        SelectTestDialogFragment selectTestDialogFragment=new SelectTestDialogFragment();
+        Bundle bundle=new Bundle();
+        TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());
+        try{
+            databaseHelper.createDatabase();
+        } catch (IOException e) {
+            throw new Error("cant make database");
+        }
+        try{
+            databaseHelper.openDatabase();
+        }
+        catch (SQLException e){
+            throw e;
+
+        }
+        List<String> testList=databaseHelper.getTests(categoryname);
+        databaseHelper.close();
+        bundle.putStringArrayList("TestList",(ArrayList)testList);
+        bundle.putString("CategoryName",categoryname);
+        selectTestDialogFragment.setArguments(bundle);
+        selectTestDialogFragment.show(getActivity().getSupportFragmentManager(),null);
+    }
+    @Override
+    public   void setUserVisibleHint(boolean visible)
+    {
+        super.setUserVisibleHint(visible);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.detach(this).attach(this).commit();
+        Log.e("HIDDEN","fds");
     }
 }

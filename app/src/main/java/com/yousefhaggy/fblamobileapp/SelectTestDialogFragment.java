@@ -63,11 +63,12 @@ public class SelectTestDialogFragment extends DialogFragment {
                 if(!generateQuiz) {
                     Intent launchTest = new Intent(getActivity(), TestPage.class);
                     launchTest.putExtra("TestName", selectedTest);
+                    launchTest.putExtra("CategoryName",categoryName);
                     startActivity(launchTest);
                 }
                 else{
                     Intent launchTest=new Intent(getActivity(),TestPage.class);
-                    launchTest.putExtra("TestName","RANDOM");
+                    launchTest.putExtra("TestName","Random "+categoryName+" Quiz");
                     launchTest.putExtra("CategoryName",categoryName);
                     startActivity(launchTest);
                 }

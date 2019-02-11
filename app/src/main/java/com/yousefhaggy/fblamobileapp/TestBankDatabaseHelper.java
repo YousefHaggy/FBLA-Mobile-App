@@ -79,7 +79,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     public void openDatabase() throws SQLException {
         String pathToDB = DB_PATH + DB_NAME;
-        database = SQLiteDatabase.openDatabase(pathToDB, null, SQLiteDatabase.OPEN_READONLY);
+        database = SQLiteDatabase.openDatabase(pathToDB, null, SQLiteDatabase.OPEN_READWRITE);
 
     }
 
@@ -171,8 +171,8 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
         int listSize = categoryNames.size();
         List<String> finalCategoryNames = new ArrayList<>();
-        if (listSize > 3) {
-            finalCategoryNames = categoryNames.subList(listSize - 3, listSize);
+        if (listSize > 4) {
+            finalCategoryNames = categoryNames.subList(listSize - 4, listSize);
         } else {
             finalCategoryNames = categoryNames;
         }
@@ -198,10 +198,22 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
             testHistoryList.add(new ScoreHistoryItem(cursor.getString(cursor.getColumnIndexOrThrow("TestName")),cursor.getDouble(cursor.getColumnIndexOrThrow("TestScore"))));
         }
         int testListSize=testHistoryList.size();
-        if(testListSize>3)
+        if(testListSize>4)
         {
-            testHistoryList=testHistoryList.subList(testListSize-3,testListSize);
+            testHistoryList=testHistoryList.subList(testListSize-4,testListSize);
         }
+        cursor.close();
         return  testHistoryList;
+    }
+    public void updateTestScoreHistory(String testName,String categoryName,double testScore)
+    {
+        database.execSQL("INSERT INTO TestHistory(TestName,CategoryName,TestScore) values('"+testName+"','"+categoryName+"',"+testScore+")");
+    }
+    public LevelInfo getLevelInfo()
+    {
+        Cursor cursor=database.rawQuery("SELECT * FROM LevelTable",null);
+        LevelInfo levelInfo=new LevelInfo(cursor.getInt(cursor.getColumnIndexOrThrow("Level")),cursor.getInt(cursor.getColumnIndexOrThrow("MaxExp")),cursor.getInt(cursor.getColumnIndexOrThrow("CurrentExp")));
+        cursor.close();
+        return levelInfo;
     }
 }
