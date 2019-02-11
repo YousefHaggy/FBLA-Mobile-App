@@ -128,7 +128,12 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             String questionText = cursor.getString(cursor.getColumnIndexOrThrow("Question"));
             String questionChoices = cursor.getString(cursor.getColumnIndexOrThrow("QuestionChoices")).toLowerCase();
-            String[] choices = questionChoices.split(";");
+            String[] choices;
+            if(questionChoices.contains(";;"))
+                choices = questionChoices.split(";;");
+            else {
+               choices = questionChoices.split(";");
+            }
             String correctAnswer = cursor.getString(cursor.getColumnIndexOrThrow("CorrectAnswer")).toLowerCase();
 
             Question question = new Question(questionText, choices, correctAnswer);
@@ -212,8 +217,25 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
     public LevelInfo getLevelInfo()
     {
         Cursor cursor=database.rawQuery("SELECT * FROM LevelTable",null);
+        cursor.moveToFirst();
         LevelInfo levelInfo=new LevelInfo(cursor.getInt(cursor.getColumnIndexOrThrow("Level")),cursor.getInt(cursor.getColumnIndexOrThrow("MaxExp")),cursor.getInt(cursor.getColumnIndexOrThrow("CurrentExp")));
         cursor.close();
         return levelInfo;
+    }
+    public void updateLevel(int changeInExp)
+    {
+        Cursor cursor=database.rawQuery("SELECT * FROM LevelTable",null);
+        cursor.moveToFirst();
+        int currentLevel= cursor.getInt(cursor.getColumnIndexOrThrow("Level"));
+        int maxExp=cursor.getInt(cursor.getColumnIndexOrThrow("MaxExp"));
+        int currentExp=cursor.getInt(cursor.getColumnIndexOrThrow("CurrentExp"));
+        cursor.close();
+        currentExp=changeInExp+currentExp;
+        while (currentExp>=maxExp) {
+            currentExp = currentExp - maxExp;
+            maxExp+=100;
+            currentLevel+=1;
+        }
+        database.execSQL("UPDATE LevelTable SET Level="+currentLevel+", CurrentExp="+currentExp+", MaxExp="+maxExp);
     }
 }

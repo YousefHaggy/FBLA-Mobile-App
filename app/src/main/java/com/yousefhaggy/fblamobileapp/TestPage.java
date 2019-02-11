@@ -82,7 +82,8 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
         DecimalFormat df = new DecimalFormat("#%");
         testPercentage.setText("Your score: " + df.format(percentage));
         testPercentage.setVisibility(View.VISIBLE);
-              updateTestScoreHistory(percentage);
+        int exp=(questionList.size()-wrong)*2;
+        updateTestScoreHistory(percentage,exp);
         testSubmitted=true;
     }
     public void getQuestionList() {
@@ -101,7 +102,7 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
         databaseHelper.close();
     }
 
-    public void updateTestScoreHistory(double score)
+    public void updateTestScoreHistory(double score,int exp)
     {
         TestBankDatabaseHelper databaseHelper = new TestBankDatabaseHelper(this);
         try {
@@ -118,6 +119,7 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
             questionList = databaseHelper.getTestQuestions(testName);
         }
         databaseHelper.updateTestScoreHistory(testName,categoryName,score);
+        databaseHelper.updateLevel(exp);
         databaseHelper.close();
     }
     @Override

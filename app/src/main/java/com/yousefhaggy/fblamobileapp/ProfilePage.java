@@ -40,5 +40,9 @@ public class ProfilePage extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         levelTextView=(TextView) view.findViewById(R.id.levelTextView);
+        levelTextView.setText(levelInfo.getLevel()+"");
+        levelProgressBar=(ProgressBar) view.findViewById(R.id.levelProgressBar);
+        levelProgressBar.setMax(levelInfo.getMaxExp());
+        levelProgressBar.setProgress(levelInfo.getCurrentExp());
     }
 }
