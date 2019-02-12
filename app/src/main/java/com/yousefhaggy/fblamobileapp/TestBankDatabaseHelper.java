@@ -5,15 +5,20 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.annotation.NonNull;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
@@ -242,4 +247,30 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
         }
         database.execSQL("UPDATE LevelTable SET Level="+currentLevel+", CurrentExp="+currentExp+", MaxExp="+maxExp);
     }
+    public Map<String,Integer> getAchievementStats(){
+        Map<String,Integer> achievementStats=new HashMap<String, Integer>();
+        Cursor cursor=database.rawQuery("SELECT * FROM TestHistory",null);
+        int numOfTestsTaken=0;
+        int highestTestScore=0;
+        HashSet<String> categoryList=new HashSet<>();
+        while(cursor.moveToNext()){
+        int testScore=(int)Math.round(cursor.getDouble(cursor.getColumnIndexOrThrow("TestScore"))*100);
+        if(testScore>highestTestScore)
+        {
+            highestTestScore=testScore;
+        }
+        String categoryName=cursor.getString(cursor.getColumnIndexOrThrow("CategoryName"));
+        if(!categoryList.contains(categoryName))
+        {
+            categoryList.add(categoryName);
+        }
+        numOfTestsTaken+=1;
+        }
+        cursor.close();
+        achievementStats.put("HighestTestScore",highestTestScore);
+        achievementStats.put("NumberOfCategories",categoryList.size());
+        achievementStats.put("NumberOfTestsTaken",numOfTestsTaken);
+        return achievementStats;
+    }
+
 }

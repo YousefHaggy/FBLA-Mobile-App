@@ -56,8 +56,10 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <GridView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/achievementRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3"/>
+        android:layout_height="match_parent" />
+
+
 </LinearLayout>
