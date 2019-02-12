@@ -149,8 +149,12 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
         while (cursor.moveToNext()) {
             String questionText = cursor.getString(cursor.getColumnIndexOrThrow("Question"));
             String questionChoices = cursor.getString(cursor.getColumnIndexOrThrow("QuestionChoices")).toLowerCase();
-            String[] choices = questionChoices.split(";");
-            String correctAnswer = cursor.getString(cursor.getColumnIndexOrThrow("CorrectAnswer")).toLowerCase();
+            String[] choices;
+            if(questionChoices.contains(";;"))
+                choices = questionChoices.split(";;");
+            else {
+                choices = questionChoices.split(";");
+            }            String correctAnswer = cursor.getString(cursor.getColumnIndexOrThrow("CorrectAnswer")).toLowerCase();
             Question question = new Question(questionText, choices, correctAnswer);
             questionList.add(question);
         }

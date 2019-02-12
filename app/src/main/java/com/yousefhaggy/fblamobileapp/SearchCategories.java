@@ -42,7 +42,7 @@ public class SearchCategories extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                SelectTestDialogFragment selectTestDialogFragment=new SelectTestDialogFragment();
+                CategoryMenuDialogFragment categoryMenuDialogFragment=new CategoryMenuDialogFragment();
                 Bundle bundle=new Bundle();
                 TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());
                 try{
@@ -61,8 +61,8 @@ public class SearchCategories extends Fragment {
                 databaseHelper.close();
                 bundle.putStringArrayList("TestList",(ArrayList)testList);
                 bundle.putString("CategoryName",categories[i]);
-                selectTestDialogFragment.setArguments(bundle);
-                selectTestDialogFragment.show(getActivity().getSupportFragmentManager(),null);
+                categoryMenuDialogFragment.setArguments(bundle);
+                categoryMenuDialogFragment.show(getActivity().getSupportFragmentManager(),null);
 
             }
         });

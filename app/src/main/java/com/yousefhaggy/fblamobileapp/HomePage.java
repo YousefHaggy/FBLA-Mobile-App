@@ -83,7 +83,7 @@ public class HomePage extends Fragment {
     }
     public void launchSelectTestDialog(String categoryname)
     {
-        SelectTestDialogFragment selectTestDialogFragment=new SelectTestDialogFragment();
+        CategoryMenuDialogFragment categoryMenuDialogFragment=new CategoryMenuDialogFragment();
         Bundle bundle=new Bundle();
         TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());
         try{
@@ -102,8 +102,8 @@ public class HomePage extends Fragment {
         databaseHelper.close();
         bundle.putStringArrayList("TestList",(ArrayList)testList);
         bundle.putString("CategoryName",categoryname);
-        selectTestDialogFragment.setArguments(bundle);
-        selectTestDialogFragment.show(getActivity().getSupportFragmentManager(),null);
+        categoryMenuDialogFragment.setArguments(bundle);
+        categoryMenuDialogFragment.show(getActivity().getSupportFragmentManager(),null);
     }
     @Override
     public   void setUserVisibleHint(boolean visible)

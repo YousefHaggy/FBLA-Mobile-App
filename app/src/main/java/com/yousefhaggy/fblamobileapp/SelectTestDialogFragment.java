@@ -16,69 +16,40 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 
+import java.util.List;
+
 public class SelectTestDialogFragment extends DialogFragment {
     private String selectedTest;
     private  boolean generateQuiz;
     private String categoryName;
+    String[] testList;
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder= new AlertDialog.Builder(getActivity());
-        LayoutInflater layoutInflater=getActivity().getLayoutInflater();
         categoryName=getArguments().getString("CategoryName");
-        final View view=layoutInflater.inflate(R.layout.select_test_dialog,null);
-        final Spinner spinner= (Spinner) view.findViewById(R.id.testSelectSpinner);
-        final CheckBox generateQuizCheckBox=(CheckBox) view.findViewById(R.id.checkBoxGenerateQuiz);
-        generateQuizCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(b)
-                {
-                    spinner.setEnabled(false);
-                    generateQuiz=true;
-                }
-                else{
-                    spinner.setEnabled(true);
-                    generateQuiz=false;
-                }
-            }
-        });
-        ArrayAdapter<String> spinnerAdapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,getArguments().getStringArrayList("TestList"));
-        spinnerAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        spinner.setAdapter(spinnerAdapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                selectedTest=spinner.getAdapter().getItem(i).toString();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-        builder.setView(view).setPositiveButton("Begin", new DialogInterface.OnClickListener() {
+        testList= new String[getArguments().getStringArrayList("TestList").size()];
+        testList=getArguments().getStringArrayList("TestList").toArray(testList);
+        selectedTest=testList[0];
+        builder.setTitle("Select a Test").setSingleChoiceItems(testList, 0,new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                if(!generateQuiz) {
-                    Intent launchTest = new Intent(getActivity(), TestPage.class);
-                    launchTest.putExtra("TestName", selectedTest);
-                    launchTest.putExtra("CategoryName",categoryName);
-                    startActivity(launchTest);
-                }
-                else{
-                    Intent launchTest=new Intent(getActivity(),TestPage.class);
-                    launchTest.putExtra("TestName","Random "+categoryName+" Quiz");
-                    launchTest.putExtra("CategoryName",categoryName);
-                    startActivity(launchTest);
-                }
+                selectedTest=testList[i];
+            }
+        }).setPositiveButton("Begin", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent launchTest = new Intent(getActivity(), TestPage.class);
+                        launchTest.putExtra("TestName", selectedTest);
+                        launchTest.putExtra("CategoryName",categoryName);
+                        startActivity(launchTest);
             }
         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
-        }).setTitle("Test Selection");
+        });
         return builder.create();
     }
 }
