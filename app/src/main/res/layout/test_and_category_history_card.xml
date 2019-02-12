@@ -25,9 +25,11 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:layout_weight=".7"
+                android:layout_gravity="center_vertical"
                 android:text="Economics 2012"
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="0dp"

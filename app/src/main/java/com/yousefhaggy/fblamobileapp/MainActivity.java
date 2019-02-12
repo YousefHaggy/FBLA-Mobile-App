@@ -8,6 +8,8 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -35,9 +37,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 //When a menu item is selected, display the corresponding page
                 DisplayFrame(menuItem.getItemId());
-                Drawable menuIcon=(Drawable)menuItem.getIcon();
-                menuIcon.mutate();
-                menuIcon.setColorFilter(Color.RED, PorterDuff.Mode.SRC_ATOP);
                 return true;
             }
         });

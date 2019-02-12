@@ -43,11 +43,18 @@ public class ProfilePage extends Fragment {
         levelInfo=databaseHelper.getLevelInfo();
         achievementStats=databaseHelper.getAchievementStats();
         databaseHelper.close();
+        achievementList.clear();
         achievementList.add(new Achievement("Take 5 tests",achievementStats.get("NumberOfTestsTaken"),5));
         achievementList.add(new Achievement("Take 10 tests",achievementStats.get("NumberOfTestsTaken"),10));
         achievementList.add(new Achievement("Take 50 tests",achievementStats.get("NumberOfTestsTaken"),50));
         achievementList.add(new Achievement("Take 100 tests",achievementStats.get("NumberOfTestsTaken"),100));
-
+        achievementList.add(new Achievement("Score 70% on a test or quiz",achievementStats.get("HighestTestScore")>=70));
+        achievementList.add(new Achievement("Score 80% on a test or quiz",achievementStats.get("HighestTestScore")>=80));
+        achievementList.add(new Achievement("Score 90% on a test or quiz",achievementStats.get("HighestTestScore")>=90));
+        achievementList.add(new Achievement("Score 100% on a test or quiz",achievementStats.get("HighestTestScore")==100));
+        achievementList.add(new Achievement("Take tests from 5 different categories",achievementStats.get("NumberOfCategories"),5));
+        achievementList.add(new Achievement("Take tests from 10 different categories",achievementStats.get("NumberOfCategories"),10));
+        achievementList.add(new Achievement("Take tests from 20 different categories",achievementStats.get("NumberOfCategories"),20));
         return inflater.inflate(R.layout.profile_page, container, false);
 
 
