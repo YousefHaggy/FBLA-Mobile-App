@@ -24,7 +24,9 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".CategoryPage" />
-        <activity android:name=".TestPage"></activity>
+        <activity android:name=".TestPage">
+
+        </activity>
     </application>
 
 </manifest>

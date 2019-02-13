@@ -38,9 +38,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Share Score"
+        android:text="Tweet Your Score"
         android:textAlignment="center"
         android:textSize="12sp"
+        android:textColor="@color/white"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:visibility="gone"
         android:drawableLeft="@drawable/ic_share_black_24dp"/>
 
@@ -63,8 +65,9 @@
 
     <Button
         android:id="@+id/submitTestButton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit Test"
-      />
+        android:textColor="@color/white" />
 </LinearLayout>

@@ -49,7 +49,11 @@ public class HomePage extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.homePage);
         LayoutInflater layoutInflater=(LayoutInflater) getActivity().getLayoutInflater();
-
+        TextView emptyTextView=(TextView) view.findViewById(R.id.emptyTextView);
+        if(recentTestList.size()==0) {
+            emptyTextView.setVisibility(View.VISIBLE);
+            linearLayout.setVisibility(View.GONE);
+        }
        for(ScoreHistoryItem s: recentCategoryList) {
            final View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
            TextView categoryTextView=(TextView) cardView.findViewById(R.id.testOrCategoryTitle);
