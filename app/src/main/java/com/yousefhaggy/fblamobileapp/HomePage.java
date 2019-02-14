@@ -89,7 +89,7 @@ public class HomePage extends Fragment {
             linearLayout.addView(cardView, 1);
         }
         for (ScoreHistoryItem s : recentTestList) {
-            View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
+           final View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
             TextView categoryTextView = (TextView) cardView.findViewById(R.id.testOrCategoryTitle);
             categoryTextView.setText(s.getItemTitle());
             TextView scoreTextView = (TextView) cardView.findViewById(R.id.scoreTextView);
@@ -97,6 +97,13 @@ public class HomePage extends Fragment {
             scoreTextView.setText(df.format(s.getItemScore()));
             TextView recentTestsHeader = (TextView) linearLayout.findViewById(R.id.recentTestsHeader);
             int index = ((ViewGroup) linearLayout).indexOfChild(recentTestsHeader);
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String testName = ((TextView) cardView.findViewById(R.id.testOrCategoryTitle)).getText().toString();
+                    launchTestDirectly(testName);
+                }
+            });
             linearLayout.addView(cardView, index + 1);
         }
     }
@@ -123,6 +130,37 @@ public class HomePage extends Fragment {
         categoryMenuDialogFragment.setArguments(bundle);
         categoryMenuDialogFragment.show(getActivity().getSupportFragmentManager(), null);
     }
+
+    public void launchTestDirectly(String testName) {
+        TestBankDatabaseHelper databaseHelper = new TestBankDatabaseHelper(getActivity());
+        try {
+            databaseHelper.createDatabase();
+        } catch (IOException e) {
+            throw new Error("cant make database");
+        }
+        try {
+            databaseHelper.openDatabase();
+        } catch (SQLException e) {
+            throw e;
+
+        }
+        ConfirmTestRetakeDialog confirmTestRetakeDialog = new ConfirmTestRetakeDialog();
+        Bundle bundle = new Bundle();
+        bundle.putString("TestName", testName);
+        String categoryName = null;
+
+        if (testName.contains("Random")) {
+            categoryName =testName.split("Random")[1].split("Quiz")[0].trim();
+        }
+        else{
+            categoryName=databaseHelper.getCategoryName(testName);
+        }
+        databaseHelper.close();
+        bundle.putString("CategoryName", categoryName);
+        confirmTestRetakeDialog.setArguments(bundle);
+        confirmTestRetakeDialog.show(getActivity().getSupportFragmentManager(), null);
+    }
+
 
     @Override
     public void setUserVisibleHint(boolean visible) {

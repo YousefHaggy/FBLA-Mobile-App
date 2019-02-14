@@ -116,6 +116,7 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
             questionList = databaseHelper.getRandomQuizQuestions(categoryName);
         } else {
             questionList = databaseHelper.getTestQuestions(testName);
+
         }
         databaseHelper.close();
     }

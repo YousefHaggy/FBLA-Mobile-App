@@ -6,6 +6,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -106,7 +108,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     public List<String> getCategoryList() {
 
-        Cursor cursor = database.rawQuery("SELECT DISTINCT CategoryName FROM QuestionTable", null);
+        Cursor cursor = database.rawQuery("SELECT DISTINCT CategoryName FROM QuestionTable ORDER BY CategoryName ASC", null);
         List<String> categoryNames = new ArrayList();
         while (cursor.moveToNext()) {
             String categoryName = cursor.getString(cursor.getColumnIndexOrThrow("CategoryName"));
@@ -175,7 +177,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public List<ScoreHistoryItem> getRecentCategories() {
-        Cursor cursor = database.rawQuery("SELECT DISTINCT CategoryName FROM TestHistory", null);
+        Cursor cursor = database.rawQuery("SELECT DISTINCT CategoryName FROM TestHistory ORDER BY _id DESC", null);
         List<String> categoryNames = new ArrayList<>();
         while (cursor.moveToNext()) {
             categoryNames.add(cursor.getString(cursor.getColumnIndexOrThrow("CategoryName")));
@@ -186,11 +188,12 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
         int listSize = categoryNames.size();
         List<String> finalCategoryNames = new ArrayList<>();
         if (listSize > 4) {
-            finalCategoryNames = categoryNames.subList(listSize - 4, listSize);
+            finalCategoryNames = categoryNames.subList(0, 4);
         } else {
             finalCategoryNames = categoryNames;
         }
         for (String s : finalCategoryNames) {
+            Log.e("s",s);
             cursor = database.rawQuery("SELECT TestScore FROM TestHistory WHERE CategoryName='" + s + "'", null);
             double averageTestScore = 0;
             int testCount = 0;
@@ -202,6 +205,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
             averageTestScore = averageTestScore / testCount;
             categoryHistoryList.add(new ScoreHistoryItem(s, averageTestScore));
         }
+        Collections.reverse(categoryHistoryList);
         return categoryHistoryList;
     }
     public List<ScoreHistoryItem> getRecentTestScores(){
@@ -271,6 +275,15 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
         achievementStats.put("NumberOfCategories",categoryList.size());
         achievementStats.put("NumberOfTestsTaken",numOfTestsTaken);
         return achievementStats;
+    }
+    public String getCategoryName(String testName)
+    {
+        Cursor cursor=database.rawQuery("SELECT DISTINCT CategoryName FROM QuestionTable WHERE TestName='"+testName+"'",null);
+        cursor.moveToNext();
+        Log.e("Testname",testName);
+        String categoryName=cursor.getString(cursor.getColumnIndexOrThrow("CategoryName"));
+        cursor.close();
+        return categoryName;
     }
 
 }

@@ -55,7 +55,7 @@ public class ProfilePage extends Fragment {
         achievementList.add(new Achievement("Score 100% on a test or quiz",achievementStats.get("HighestTestScore")==100));
         achievementList.add(new Achievement("Take tests from 5 different categories",achievementStats.get("NumberOfCategories"),5));
         achievementList.add(new Achievement("Take tests from 10 different categories",achievementStats.get("NumberOfCategories"),10));
-        achievementList.add(new Achievement("Take tests from 20 different categories",achievementStats.get("NumberOfCategories"),20));
+        achievementList.add(new Achievement("Take tests from 15 different categories",achievementStats.get("NumberOfCategories"),15));
         return inflater.inflate(R.layout.profile_page, container, false);
 
 
