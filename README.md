@@ -1,1 +1,1 @@
-FBLA-Mobile-App
+![Logo image](ReadMeImages/logo.png)
