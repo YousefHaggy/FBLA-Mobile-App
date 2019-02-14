@@ -56,26 +56,29 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
     public void onBindViewHolder(@NonNull final QuestionViewHolder questionViewHolder, int i) {
         questionViewHolder.questionText.setText((i+1)+". "+questions.get(i).question);
         questionViewHolder.radioGroup.removeAllViews();
-
         for (int c = 0; c < questions.get(i).choices.length; c++) {
 
             final RadioButton answerChoice = new RadioButton(questionViewHolder.context);
 
             answerChoice.setText(questions.get(i).choices[c]);
-            if (questions.get(i).getSelectedChoice() != null && questions.get(i).getSelectedChoice().equals(questions.get(i).choices[c])) {
-                answerChoice.setChecked(true);
-            }
+
             answerChoice.setOnCheckedChangeListener(new RadioButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
                     if (b) {
                         questions.get(questionViewHolder.getAdapterPosition()).setSelectedChoice(answerChoice.getText().toString());
-                        // Log.e("STUFF ", questionViewHolder.getAdapterPosition() + " Positon " + questions.get(questionViewHolder.getAdapterPosition()).getSelectedChoice());
                     }
+
                 }
             });
 
             questionViewHolder.radioGroup.addView(answerChoice);
+            if (questions.get(i).getSelectedChoice() != null && questions.get(i).getSelectedChoice().equals(questions.get(i).choices[c])) {
+                //answerChoice.setChecked(true);
+                questionViewHolder.radioGroup.check(((RadioButton)questionViewHolder.radioGroup.getChildAt(c)).getId());
+
+            }
         }
         if(testSubmitted) {
             for (int ch = 0; ch < questionViewHolder.radioGroup.getChildCount(); ch++) {

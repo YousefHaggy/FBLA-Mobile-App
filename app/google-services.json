@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "677843529180",
+    "firebase_url": "https://businessbud-1.firebaseio.com",
+    "project_id": "businessbud-1",
+    "storage_bucket": "businessbud-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677843529180:android:2ba87eb116b4de96",
+        "android_client_info": {
+          "package_name": "com.yousefhaggy.fblamobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677843529180-kmt53l9hmdn7vbj1ivonrq3o27khbnt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwIN8hYtAsG4c6HMNSpr0uTF3ssBAcZJM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

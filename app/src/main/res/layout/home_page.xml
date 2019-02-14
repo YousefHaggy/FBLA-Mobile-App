@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text='It appears you have not yet taken any tests or quizzes, goto the "search" page to find some blah blah'
+        android:text='It appears you have not yet taken any tests or quizzes. To take a quiz or test, go to the "search" page and pick a category. After doing so, test history will appear on this page'
         android:textAlignment="center"
         android:visibility="gone" />
 

@@ -5,6 +5,7 @@ import android.database.SQLException;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
@@ -39,9 +40,21 @@ public class SearchCategories extends Fragment {
         listView=(ListView) view.findViewById(R.id.categoryListView);
         ArrayAdapter<String> listAdapter=new ArrayAdapter<String>(getActivity(),R.layout.simple_list_item, categories);
         listView.setAdapter(listAdapter);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.helpFloatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HelpDialogFragment dialogFragment = new HelpDialogFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("HelpContent", "Select a category to take tests or quizzes. Tap the search icon in the upper right corner to filter categories");
+                dialogFragment.setArguments(bundle);
+                dialogFragment.show(getActivity().getSupportFragmentManager(), null);
+            }
+        });
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                 CategoryMenuDialogFragment categoryMenuDialogFragment=new CategoryMenuDialogFragment();
                 Bundle bundle=new Bundle();
                 TestBankDatabaseHelper databaseHelper=new TestBankDatabaseHelper(getActivity());

@@ -4,6 +4,7 @@ import android.database.SQLException;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -63,6 +64,17 @@ public class ProfilePage extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.helpFloatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HelpDialogFragment dialogFragment = new HelpDialogFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("HelpContent", "This is the profile page. It displays your current level, a level progress bar, and all your locked and unlocked achievements.");
+                dialogFragment.setArguments(bundle);
+                dialogFragment.show(getActivity().getSupportFragmentManager(), null);
+            }
+        });
         levelTextView=(TextView) view.findViewById(R.id.levelTextView);
         levelTextView.setText(levelInfo.getLevel()+"");
         levelProgressBar=(ProgressBar) view.findViewById(R.id.levelProgressBar);
