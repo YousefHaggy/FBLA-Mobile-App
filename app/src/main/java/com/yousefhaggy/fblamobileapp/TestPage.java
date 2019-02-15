@@ -64,6 +64,9 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
             @Override
             public void onClick(View view) {
                 DecimalFormat df = new DecimalFormat("#%");
+                //Fixes errors with the twitter URL
+                if(categoryName.contains("&"))
+                    categoryName=categoryName.replace("&","and");
                 String shareBody="I just scored "+df.format(percentage)+"25 on an FBLA "+categoryName+" Test! ";
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/intent/tweet?text="+shareBody));
                 startActivity(browserIntent);
