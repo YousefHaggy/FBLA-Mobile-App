@@ -14,4 +14,3 @@ The ultimate app for testing and improving your FBLA knowledge
 
 To install the app on your phone, you can either run the app 
 ### Features
-
