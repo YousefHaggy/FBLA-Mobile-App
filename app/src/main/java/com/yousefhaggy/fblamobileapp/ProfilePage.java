@@ -49,9 +49,9 @@ public class ProfilePage extends Fragment {
         achievementList.add(new Achievement("Take 10 tests",achievementStats.get("NumberOfTestsTaken"),10));
         achievementList.add(new Achievement("Take 50 tests",achievementStats.get("NumberOfTestsTaken"),50));
         achievementList.add(new Achievement("Take 100 tests",achievementStats.get("NumberOfTestsTaken"),100));
-        achievementList.add(new Achievement("Score 70% on a test or quiz",achievementStats.get("HighestTestScore")>=70));
-        achievementList.add(new Achievement("Score 80% on a test or quiz",achievementStats.get("HighestTestScore")>=80));
-        achievementList.add(new Achievement("Score 90% on a test or quiz",achievementStats.get("HighestTestScore")>=90));
+        achievementList.add(new Achievement("Score 70% or higher on a test or quiz",achievementStats.get("HighestTestScore")>=70));
+        achievementList.add(new Achievement("Score 80% or higher on a test or quiz",achievementStats.get("HighestTestScore")>=80));
+        achievementList.add(new Achievement("Score 90% or higher on a test or quiz",achievementStats.get("HighestTestScore")>=90));
         achievementList.add(new Achievement("Score 100% on a test or quiz",achievementStats.get("HighestTestScore")==100));
         achievementList.add(new Achievement("Take tests from 5 different categories",achievementStats.get("NumberOfCategories"),5));
         achievementList.add(new Achievement("Take tests from 10 different categories",achievementStats.get("NumberOfCategories"),10));
