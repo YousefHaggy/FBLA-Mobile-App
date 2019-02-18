@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+// This dialog is meant to display help info for whatever activity it
+// is called from. In addition it, it allows users to view the terms of use
+// and report any bugs they've encountered
 public class HelpDialogFragment extends DialogFragment {
     @NonNull
     @Override

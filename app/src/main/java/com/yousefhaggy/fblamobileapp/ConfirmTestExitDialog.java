@@ -8,7 +8,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
-
+// Simple confirm dialog called upon when a user attempts to leave
+// an ongoing test
 public class ConfirmTestExitDialog extends DialogFragment {
     public interface ConfirmTestExitInterface{
         public void onConfirmExit();

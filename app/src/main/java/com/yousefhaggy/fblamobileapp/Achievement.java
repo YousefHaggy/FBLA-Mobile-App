@@ -1,5 +1,5 @@
 package com.yousefhaggy.fblamobileapp;
-
+//Class for achievement details and progress
 public class Achievement {
     public boolean isEarned;
     public int progress;
