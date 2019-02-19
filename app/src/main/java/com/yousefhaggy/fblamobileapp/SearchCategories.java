@@ -22,7 +22,11 @@ import android.widget.ListView;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+// This page lists all available testing categories. In addition,
+// it provides a search view in the action bar to filter the list, which
+// allows users to easily find what they are looking for. As the list of
+// testing categories included in this app may grow in the future, this
+// ensures the UI is still user friendly
 public class SearchCategories extends Fragment {
     private ListView listView;
     private String[] categories;

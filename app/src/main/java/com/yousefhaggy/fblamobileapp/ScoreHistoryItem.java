@@ -1,12 +1,14 @@
 package com.yousefhaggy.fblamobileapp;
-
+// Class for category history and test history cards
 public class ScoreHistoryItem {
-    private  String itemTitle;
-    private  double itemScore;
+    private String itemTitle;
+    private double itemScore;
+
     public ScoreHistoryItem(String itemTitle, double itemScore) {
         this.itemTitle = itemTitle;
-        this.itemScore=itemScore;
+        this.itemScore = itemScore;
     }
+
     public String getItemTitle() {
         return itemTitle;
     }
@@ -22,7 +24,6 @@ public class ScoreHistoryItem {
     public void setItemScore(double itemScore) {
         this.itemScore = itemScore;
     }
-
 
 
 }

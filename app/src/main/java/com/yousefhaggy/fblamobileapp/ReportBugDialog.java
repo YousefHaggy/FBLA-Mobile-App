@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 
-
+// Logs bugs via Crashlytics
 public class ReportBugDialog extends DialogFragment {
     @NonNull
     @Override

@@ -21,6 +21,8 @@ import com.crashlytics.android.Crashlytics;
 
 import io.fabric.sdk.android.Fabric;
 
+// This file mainly facilities navigation between app fragments and
+// other navigation events. It controls the bottom app bar
 public class MainActivity extends AppCompatActivity {
     //Bar at the top of app the shows page title,
     //indicating to the user where they are on the app
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
-        toolbar=(Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setIcon(R.drawable.logo_no_background);
         bottomNav = (BottomNavigationView) findViewById(R.id.navigationView);
@@ -48,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         });
         DisplayFrame(R.id.nav_home);
     }
+
     @Override
-    public boolean onPrepareOptionsMenu(Menu menu)
-    {
+    public boolean onPrepareOptionsMenu(Menu menu) {
 
         super.onPrepareOptionsMenu(menu);
         return true;
@@ -63,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -70,45 +73,44 @@ public class MainActivity extends AppCompatActivity {
         return false;
 
     }
+
     @Override
     protected void onResume() {
-        if(currentFragment!=null) {
+        if (currentFragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             //Replace main fragment container with new fragment
-            Log.e("ss","CurrentFra");
+            Log.e("ss", "CurrentFra");
             fragmentTransaction.detach(currentFragment);
             fragmentTransaction.attach(currentFragment);
             fragmentTransaction.commit();
         }
         super.onResume();
     }
-    private void DisplayFrame(int id)
-    {
-        Fragment fragment=null;
+
+    private void DisplayFrame(int id) {
+        Fragment fragment = null;
         //Assign fragment based off of the inputted id
-        switch(id)
-        {
+        switch (id) {
             case R.id.nav_home:
-                fragment=new HomePage();
+                fragment = new HomePage();
                 setTitle("Home Page");
                 break;
             case R.id.nav_search:
-                fragment=new SearchCategories();
+                fragment = new SearchCategories();
                 setTitle("Search Categories");
                 break;
             case R.id.nav_profile:
-                fragment=new ProfilePage();
+                fragment = new ProfilePage();
                 setTitle("Profile");
                 break;
 
         }
-        if(fragment!=null)
-        {
-            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+        if (fragment != null) {
+            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             //Replace main fragment container with new fragment
-            fragmentTransaction.replace(R.id.container,fragment);
+            fragmentTransaction.replace(R.id.container, fragment);
             fragmentTransaction.commit();
-            currentFragment=fragment;
+            currentFragment = fragment;
         }
 
     }

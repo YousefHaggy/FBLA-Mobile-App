@@ -18,7 +18,7 @@ import android.widget.CompoundButton;
 import android.widget.Spinner;
 
 import java.util.List;
-
+// Dialog for selecting from list of pre-made tests
 public class SelectTestDialogFragment extends DialogFragment {
     private String selectedTest;
     private boolean generateQuiz;

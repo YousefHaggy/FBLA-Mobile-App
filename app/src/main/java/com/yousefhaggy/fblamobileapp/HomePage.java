@@ -24,6 +24,10 @@ import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
 
+// The home page lists recently taken tests, their corresponding categories
+// and  corresponding scores. Clicking on a previously taken test or category
+// serves as a shortcut to that test or category
+
 public class HomePage extends Fragment {
     List<ScoreHistoryItem> recentCategoryList = new ArrayList<>();
     List<ScoreHistoryItem> recentTestList = new ArrayList<>();
@@ -89,7 +93,7 @@ public class HomePage extends Fragment {
             linearLayout.addView(cardView, 1);
         }
         for (ScoreHistoryItem s : recentTestList) {
-           final View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
+            final View cardView = layoutInflater.inflate(R.layout.test_and_category_history_card, null);
             TextView categoryTextView = (TextView) cardView.findViewById(R.id.testOrCategoryTitle);
             categoryTextView.setText(s.getItemTitle());
             TextView scoreTextView = (TextView) cardView.findViewById(R.id.scoreTextView);
@@ -150,10 +154,9 @@ public class HomePage extends Fragment {
         String categoryName = null;
 
         if (testName.contains("Random")) {
-            categoryName =testName.split("Random")[1].split("Quiz")[0].trim();
-        }
-        else{
-            categoryName=databaseHelper.getCategoryName(testName);
+            categoryName = testName.split("Random")[1].split("Quiz")[0].trim();
+        } else {
+            categoryName = databaseHelper.getCategoryName(testName);
         }
         databaseHelper.close();
         bundle.putString("CategoryName", categoryName);

@@ -17,7 +17,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// This recycler view adapter and its corresponding recycler view
+// contain test questions in an easily navigable and visually appealing
+// fashion. In addition, recycler views are very efficient when it comes
+// to handling large data sets, so it can handle large tests
 public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRecyclerViewAdapter.QuestionViewHolder> {
     public static class QuestionViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
@@ -31,14 +34,15 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
             cardView = (CardView) itemView.findViewById(R.id.cardView);
             questionText = (TextView) itemView.findViewById(R.id.questionTextView);
             radioGroup = (RadioGroup) itemView.findViewById(R.id.answerRadioGroup);
-            correctAnswerView= (TextView) itemView.findViewById(R.id.correctAnswerTextView);
+            correctAnswerView = (TextView) itemView.findViewById(R.id.correctAnswerTextView);
             context = itemView.getContext();
         }
 
     }
 
     public List<Question> questions;
-    public boolean testSubmitted=false;
+    public boolean testSubmitted = false;
+
     QuestionRecyclerViewAdapter(List<Question> questions) {
         this.questions = questions;
     }
@@ -54,7 +58,7 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
 
     @Override
     public void onBindViewHolder(@NonNull final QuestionViewHolder questionViewHolder, int i) {
-        questionViewHolder.questionText.setText((i+1)+". "+questions.get(i).question);
+        questionViewHolder.questionText.setText((i + 1) + ". " + questions.get(i).question);
         questionViewHolder.radioGroup.removeAllViews();
         for (int c = 0; c < questions.get(i).choices.length; c++) {
 
@@ -76,21 +80,21 @@ public class QuestionRecyclerViewAdapter extends RecyclerView.Adapter<QuestionRe
             questionViewHolder.radioGroup.addView(answerChoice);
             if (questions.get(i).getSelectedChoice() != null && questions.get(i).getSelectedChoice().equals(questions.get(i).choices[c])) {
                 //answerChoice.setChecked(true);
-                questionViewHolder.radioGroup.check(((RadioButton)questionViewHolder.radioGroup.getChildAt(c)).getId());
+                questionViewHolder.radioGroup.check(((RadioButton) questionViewHolder.radioGroup.getChildAt(c)).getId());
 
             }
         }
-        if(testSubmitted) {
+        if (testSubmitted) {
             for (int ch = 0; ch < questionViewHolder.radioGroup.getChildCount(); ch++) {
 
-if(!((RadioButton)questionViewHolder.radioGroup.getChildAt(ch)).getText().toString().equals(questions.get(i).getSelectedChoice())) {
-    questionViewHolder.radioGroup.getChildAt(ch).setEnabled(false);
-}
+                if (!((RadioButton) questionViewHolder.radioGroup.getChildAt(ch)).getText().toString().equals(questions.get(i).getSelectedChoice())) {
+                    questionViewHolder.radioGroup.getChildAt(ch).setEnabled(false);
+                }
 
             }
             if (questions.get(i).isWrong) {
                 questionViewHolder.cardView.setCardBackgroundColor(Color.parseColor("#ffe6e6"));
-               questionViewHolder.correctAnswerView.setText("Correct answer: "+questions.get(i).answer);
+                questionViewHolder.correctAnswerView.setText("Correct answer: " + questions.get(i).answer);
                 questionViewHolder.correctAnswerView.setVisibility(View.VISIBLE);
 
             } else {

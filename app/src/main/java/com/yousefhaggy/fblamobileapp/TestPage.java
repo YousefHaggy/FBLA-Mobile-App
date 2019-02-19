@@ -20,7 +20,9 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-
+// The testing page contains a recycler view with test questions,
+// a submit button, confirm dialogs, and an integrated twitter share
+// button
 public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog.ConfirmTestExitInterface, ConfirmTestSubmitDialog.ConfirmTestSubmitInterface {
     List<Question> questionList = new ArrayList<>();
     RecyclerView testRecyclerView;

@@ -1,5 +1,6 @@
 package com.yousefhaggy.fblamobileapp;
 
+// Level information for a user
 public class LevelInfo {
     private int level;
     private int maxExp;

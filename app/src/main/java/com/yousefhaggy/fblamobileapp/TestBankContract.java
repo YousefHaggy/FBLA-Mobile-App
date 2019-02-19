@@ -4,7 +4,8 @@ import android.provider.BaseColumns;
 
 public final class TestBankContract {
     //  Making the constructor private prevents someone from accidentally
-    // instantiating this class
+    // instantiating this class. This class just holds some important static
+    // strings for accessing the SQLite database
     private TestBankContract(){}
     public static class QuestionTable implements BaseColumns
     {
@@ -15,12 +16,5 @@ public final class TestBankContract {
         public static final String COLUMN_NAME_CHOICES="QuestionChoices";
 
     }
-    public static class AnswerTable implements BaseColumns
-    {
-        public static final String TABLE_NAME="AnswerTable";
-        public static final String COLUMN_NAME_QUESTIONID="QuestionID";
-        public static final String COLUMN_NAME_ANSWER="QuestionAnswer";
 
-
-    }
 }

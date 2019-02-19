@@ -21,7 +21,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-
+// Data for this app including test questions, test history, and level progress
+// are all stored in an SQLite database. Using an SQLite database makes accessing
+// and storing large sets of data easy and fast. This app already handles over 2000
+// FBLA questions, and organizing and accessing them efficiently is possible
+// due to this database. 
 public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VESION = 1;
