@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
@@ -27,7 +28,8 @@
 
 
         </activity>
-        <activity android:name=".TestPage"></activity>
+        <activity android:name=".TestPage"
+            android:screenOrientation="portrait"></activity>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="1ea834d4a250cf9f101e021b9447837af9a8b8ab" />

@@ -25,7 +25,7 @@ import java.util.Set;
 // are all stored in an SQLite database. Using an SQLite database makes accessing
 // and storing large sets of data easy and fast. This app already handles over 2000
 // FBLA questions, and organizing and accessing them efficiently is possible
-// due to this database. 
+// due to this database.
 public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VESION = 1;
