@@ -11,7 +11,7 @@ Full set of GUI Screenshots can be found here: [screenshots.pdf](screenshots.pdf
 ### Project Installation Instructions for Android Studio
 1. Download the zip file  from this link here: [Project Zip File](https://github.com/YousefHaggy/FBLA-Mobile-App/archive/master.zip)
 2. Unzip the content into a new folder
-3. Launch Android Studio, select 'Open an existing Android Studio project", navigate to the folder created in step 2. and select the folder "FBLA-Mobile-App-master"
+3. Launch Android Studio, select 'Open an existing Android Studio project", navigate to the folder created in step 2. and select the folder "FBLA-Mobile-App-master". If a different project is already open in Android Studio, select "file" from the toolbar, then select "Open..." and navigate to the aforementioned folder.
 
 Code files can be found in the "app/src/main/java/com/yousefhaggy/fblamobileapp/" directory or you can view them by going [here](app/src/main/java/com/yousefhaggy/fblamobileapp/)
 ### Running the app
