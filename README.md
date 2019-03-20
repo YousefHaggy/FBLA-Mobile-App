@@ -27,7 +27,7 @@ To install the app on your phone, you can either build the app through Android S
 Android Studio can be downloaded to your computer from [this link](https://developer.android.com/studio/?gclid=Cj0KCQjwg73kBRDVARIsAF-kEH_QSh761Oi_tirruUVzvCp4fIgIfwK-IYDOKm7aFY2psSiQfkwW3voaAuuCEALw_wcB)
 1. Download the zip file  from this link here: [Project Zip File](https://github.com/YousefHaggy/FBLA-Mobile-App/archive/master.zip)
 2. Unzip the content into a new folder
-3. Launch Android Studio, select 'Open an existing Android Studio project", navigate to the folder created in step 2. and select the folder "FBLA-Mobile-App-master". If a different project is already open in Android Studio, select "file" from the toolbar, then select "Open..." and navigate to the aforementioned folder.
+3. Launch Android Studio, select **Open an existing Android Studio project**, navigate to the folder created in step 2. and select the folder "FBLA-Mobile-App-master". If a different project is already open in Android Studio, select **File** from the toolbar, then select **Open...** and navigate to the aforementioned folder.
 
 Code files can be found in the "app/src/main/java/com/yousefhaggy/fblamobileapp/" directory or you can view them by going [here](app/src/main/java/com/yousefhaggy/fblamobileapp/)
 
