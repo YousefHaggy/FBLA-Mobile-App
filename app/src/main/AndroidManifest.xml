@@ -15,6 +15,10 @@
         android:theme="@style/AppTheme"
 
         >
+        <provider android:authorities="com.facebook.app.FacebookContentProvider300569827535888"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

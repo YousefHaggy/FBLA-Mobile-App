@@ -13,6 +13,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,8 +60,8 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
                 dialog.show(getSupportFragmentManager(), null);
             }
         });
-        Button shareButton= (Button) findViewById(R.id.shareButton);
-        shareButton.setOnClickListener(new Button.OnClickListener() {
+        Button shareButtonTwitter= (Button) findViewById(R.id.shareButtonTwitter);
+        shareButtonTwitter.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DecimalFormat df = new DecimalFormat("#%");
@@ -69,6 +72,19 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/intent/tweet?text="+shareBody));
                 startActivity(browserIntent);
 
+            }
+        });
+        Button shareButtonFacebook= (Button) findViewById(R.id.shareButtonFacebook);
+        final ShareDialog shareDialog;
+        shareDialog= new ShareDialog(this);
+
+        shareButtonFacebook.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                ShareLinkContent content= new ShareLinkContent.Builder().setContentUrl(Uri.parse("http://fbla.org")).setQuote("I just scored "+percentage+"% on an FBLA "+categoryName+" Test! ").build();
+               shareDialog.show(content, ShareDialog.Mode.AUTOMATIC);
             }
         });
     }
@@ -93,8 +109,10 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
          percentage = (questionList.size() - wrong * 1.0) / questionList.size();
         TextView testPercentage = (TextView) findViewById(R.id.testPercentage);
         TextView testScore = (TextView) findViewById(R.id.testScore);
-        Button shareButton = (Button) findViewById(R.id.shareButton);
-        shareButton.setVisibility(View.VISIBLE);
+        Button shareButtonTwitter = (Button) findViewById(R.id.shareButtonTwitter);
+        shareButtonTwitter.setVisibility(View.VISIBLE);
+        Button shareButtonFacebook = (Button) findViewById(R.id.shareButtonFacebook);
+        shareButtonFacebook.setVisibility(View.VISIBLE);
         testScore.setText("You missed " + wrong + " questions");
         testScore.setVisibility(View.VISIBLE);
         DecimalFormat df = new DecimalFormat("#%");

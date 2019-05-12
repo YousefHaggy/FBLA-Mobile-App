@@ -6,5 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 <color name="fblagold">#fad853</color>
+    <color name="twitterblue">#1da1f2</color>
+    <color name="facebookblue">#3b5998</color>
     <color name="fblared">#bf0d3e</color>
 </resources>

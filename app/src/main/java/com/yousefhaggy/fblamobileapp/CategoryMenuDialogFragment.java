@@ -23,7 +23,7 @@ public class CategoryMenuDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        String[] choices = {"Random Quiz", "Pre-made test"};
+        String[] choices = {"Random 10 Question Quiz", "Official full-length test"};
         categoryName = getArguments().getString("CategoryName");
         testList = getArguments().getStringArrayList("TestList");
         builder.setTitle("Select Test Type").setItems(choices, new DialogInterface.OnClickListener() {
