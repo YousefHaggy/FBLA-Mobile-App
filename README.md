@@ -10,9 +10,11 @@ Full set of GUI Screenshots can be found here: [screenshots.pdf](screenshots.pdf
 ### Running the app
 To install the app on your phone, you can either build the app through Android Studio or transfer the apk file found  [here](https://github.com/YousefHaggy/FBLA-Mobile-App/raw/master/apk/BusinessBud.apk) to your phone and open it.
 #### Method 1 (preferred): Running the app on an external device through google play
+If the app is already on your phone, be sure to uninstall the app before following these steps to avoid any errors
 1. Launch the google play store and search for "Business Bud" or click [here](https://play.google.com/store/apps/details?id=com.yousefhaggy.fblamobileapp)
 2. Install the app and open it
 #### Method 2: Running the app on an external device by downloading the apk
+If the app is already on your phone, be sure to uninstall the app before following these steps to avoid any errors
 1. Open this exact webpage on your android phone's browser [https://github.com/YousefHaggy/FBLA-Mobile-App/blob/master/README.md](https://github.com/YousefHaggy/FBLA-Mobile-App/blob/master/README.md)
 2. Click [here](https://github.com/YousefHaggy/FBLA-Mobile-App/raw/master/apk/BusinessBud.apk) to download the apk file to your device. If your phone is on Android 8.0 or higher, you'll be prompted to allow your browser to install APKs
 3. If your phone is on Android 7.0 or lower and you haven't already enabled installation from unknown sources, you will prompted to goto the settings app and enable it. 
