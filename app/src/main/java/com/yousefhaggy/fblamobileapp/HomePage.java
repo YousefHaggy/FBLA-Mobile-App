@@ -44,7 +44,7 @@ public class HomePage extends Fragment {
             throw e;
 
         }
-        recentCategoryList = databaseHelper.getRecentCategories();
+       recentCategoryList = databaseHelper.getRecentCategories();
         recentTestList = databaseHelper.getRecentTestScores();
         databaseHelper.close();
         return inflater.inflate(R.layout.home_page, container, false);

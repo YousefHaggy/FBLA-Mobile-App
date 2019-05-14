@@ -40,7 +40,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+        sqLiteDatabase.disableWriteAheadLogging();
     }
 
     @Override
@@ -88,7 +88,7 @@ public class TestBankDatabaseHelper extends SQLiteOpenHelper {
     public void openDatabase() throws SQLException {
         String pathToDB = DB_PATH + DB_NAME;
         database = SQLiteDatabase.openDatabase(pathToDB, null, SQLiteDatabase.OPEN_READWRITE);
-
+        database.disableWriteAheadLogging();
     }
 
     public void copyDatabase() throws IOException {

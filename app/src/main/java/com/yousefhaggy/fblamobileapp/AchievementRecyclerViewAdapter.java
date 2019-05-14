@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
 // Recycler view adapter for displaying all achievements
 public class AchievementRecyclerViewAdapter extends RecyclerView.Adapter<AchievementRecyclerViewAdapter.AchievementViewHolder> {
 
@@ -47,7 +48,7 @@ public class AchievementRecyclerViewAdapter extends RecyclerView.Adapter<Achieve
     public void onBindViewHolder(@NonNull AchievementViewHolder achievementViewHolder, int i) {
         achievementViewHolder.descriptionTextView.setText(achievementList.get(i).description);
         achievementViewHolder.progressTextView.setText(achievementList.get(i).progress + "/" + achievementList.get(i).max);
-       //If achievement is earned, change the locked icon to a green check mark
+        //If achievement is earned, change the locked icon to a green check mark
         if (achievementList.get(i).isEarned) {
             achievementViewHolder.achievementImageView.setImageResource(R.drawable.ic_check_circle_green_24dp);
         } else {

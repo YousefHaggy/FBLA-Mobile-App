@@ -83,7 +83,7 @@ public class TestPage extends AppCompatActivity implements ConfirmTestExitDialog
             public void onClick(View view) {
 
 
-                ShareLinkContent content= new ShareLinkContent.Builder().setContentUrl(Uri.parse("http://fbla.org")).setQuote("I just scored "+percentage+"% on an FBLA "+categoryName+" Test! ").build();
+                ShareLinkContent content= new ShareLinkContent.Builder().setContentUrl(Uri.parse("https://play.google.com/store/apps/details?id=com.yousefhaggy.fblamobileapp")).setQuote("I just scored "+percentage+"% on an FBLA "+categoryName+" Test! ").build();
                shareDialog.show(content, ShareDialog.Mode.AUTOMATIC);
             }
         });
