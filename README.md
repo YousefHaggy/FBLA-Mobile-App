@@ -42,7 +42,7 @@ Code files can be found in the "app/src/main/java/com/yousefhaggy/fblamobileapp/
 ### Key Features
  - Over 2000 official FBLA questions spanning across 25 tests and 15 categories
  - Taking tests is seamless with a custom UI that provides smooth navigation between questions
- - Easily share test scores with an integrated tweet button
+ - Easily share test scores with an integrated tweet button and facebook share
  - Leveling and Achievement system that motivates users to continue using the app
  - Automatic bug and crash reporting as well as the option to manually report bugs
  - Ability to generate random quizzes for any category
